@@ -136,7 +136,7 @@ public class HomePage extends AppCompatActivity implements ProfileFragment.OnFra
         StrictMode.setVmPolicy(builder1.build());
 
         if (Build.VERSION.SDK_INT >= 23) {
-            String[] PERMISSIONS = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
+            String[] PERMISSIONS = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA};
             if (!hasPermissions(mContext, PERMISSIONS)) {
                 ActivityCompat.requestPermissions((Activity) mContext, PERMISSIONS, REQUEST );
             } else {
